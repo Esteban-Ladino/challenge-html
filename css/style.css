@@ -1,11 +1,6 @@
 @font-face {
-    font-family: "Lato-Black";
+    font-family: "lato-Black";
     src: url('../fonts/Lato/Lato-Black.ttf');
-}
-
-@font-face {
-    font-family: "Lato-BlackItalic";
-    src: url('../fonts/Lato/Lato-BlackItalic.ttf');
 }
 
 @font-face {
@@ -14,8 +9,68 @@
 }
 
 @font-face {
-    font-family: "Lato-BoldItalic";
-    src: url('../fonts/Lato/Lato-BoldItalic.ttf');
+    font-family: "Lato-SemiBold";
+    src: url('../fonts/Lato/Lato-Semibold.ttf');
+}
+
+@font-face {
+    font-family: "lato-Regular";
+    src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "lato-Medium";
+    src: url('../fonts/Lato/Lato-Medium.ttf');
+}
+
+@font-face {
+    font-family: "lato-Hairline";
+    src: url('../fonts/Lato/Lato-Hairline.ttf');
+}
+
+@font-face {
+    font-family: "oswald-Regular";
+    src: url('../fonts/Oswald/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: "oswald-Medium";
+    src: url('../fonts/Oswald/Oswald-Medium.ttf');
+}
+
+@font-face {
+    font-family: "oswald-Bold";
+    src: url('../fonts/Oswald/Oswald-Bold.ttf');
+}
+
+@font-face {
+    font-family: "oswald-SemiBold";
+    src: url('../fonts/Oswald/Oswald-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "oswald-Light";
+    src: url('../fonts/Oswald/Oswald-Light.ttf');
+}
+
+@font-face {
+    font-family: "oswald-ExtraLight";
+    src: url('../fonts/Oswald/Oswald-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url('../fonts/Icomoon/icomoon.ttf');     
+}
+
+[class^="icon-"], [class*="icon-"] {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+
+    -webkit-font-smoothing: anialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -23,14 +78,23 @@ body {
 }
 
 h1 {
-    display: flex;
-    align-items: center;
+    font-family: "lato-Medium";
+    font-size: 27px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    color: #1E1F24;
     margin: 0px;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+h1 strong {
+    font-family: "lato-Medium";
+    color: #FF565B;
 }
 
 ol {
-    display: inherit;
-    grid-template-columns: repeat(7, 1fr);
+    display: flex;
     justify-items: center;
     list-style: none;
     padding-left: 0px;
@@ -40,21 +104,55 @@ li {
     padding: 0px 10px 0px;
 }
 
+header {
+    background-color: white;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+}
+
+.container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 470px);
+    gap: 5px;
+    justify-content: center;
+    grid-auto-flow: dense;
+    background-color: #F9FAFC;
+    margin: 0px auto;
+}
 
 .header .container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    background-color: white;
+    background-color: transparent;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
 }
 
 .menu {
-    display: inherit;
+    font-family: "oswald-Regular";
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: .5px;
+    display: flex;
     justify-content: start;
 }
 
 .menu a {
-    color: black;
+    color: #D4D4D6;
     text-decoration: none;
+    padding-right: 25px;
+}
+
+.icon-menu:before {
+    content: "\e9e0";
+}
+
+.burguer-button {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    padding: 0px 50px;
+    transform: scaleX(1.4);
 }
 
 figure {
@@ -71,13 +169,20 @@ figure {
     object-fit: cover;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 470px);
-    gap: 5px;
-    justify-content: center;
-    grid-auto-flow: dense;
-    background-color: #F9FAFC;
+.card-title {
+    font-family: "lato-Regular";
+    color: #1F2025;
+    font-size: 32px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.card-description {
+    font-family: "lato-Regular";
+    color: #7B7C80;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-top: 10px;
 }
 
 .level-1 {
@@ -97,7 +202,7 @@ footer {
 footer .container {
     color: white;
     background-color: transparent;
-    grid-template-columns: 20% 1fr 30%;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     justify-items: center;
 }
