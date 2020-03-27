@@ -113,18 +113,20 @@ header {
 .container {
     max-width: 1440px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 470px);
+    grid-template-columns: repeat(auto-fill, 450px);
     gap: 5px;
     justify-content: center;
     grid-auto-flow: dense;
     background-color: #F9FAFC;
     margin: 0px auto;
+    padding: 20px 40px;
 }
 
 .header .container {
     background-color: transparent;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    padding: 0px;
 }
 
 .menu {
@@ -161,6 +163,29 @@ figure {
 
 .card {
     padding: 10px;
+}
+
+.card-image {
+    position: relative;
+}
+
+.card-image:before {
+    position: absolute;
+    bottom: 30px;
+    left: -5px;
+    display: flex;
+    content: "TECHNOLOGY";
+    font-family: "oswald-Regular";
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: .5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #FF565B;
+    height: 40px;
+    width: 150px;
 }
 
 .card-image img {
@@ -205,6 +230,22 @@ footer .container {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     justify-items: center;
+    padding: 0px;
+}
+
+.footer-logo {
+    padding: 0px 50px;
+}
+
+.footer-logo h1 {
+    color: #494A4E;
+    padding: 0;
+}
+
+.footer-logo p {
+    font-family: "lato-Regular";
+    color: #88898B;
+    margin-top: 5px;
 }
 
 .footer-info {
@@ -214,9 +255,71 @@ footer .container {
 }
 
 .footer-info a {
+    font-family: "oswald-Regular";
+    font-size: 15px;
+    letter-spacing: 2px;
     color: white;
     text-decoration: none;
+    padding: 10px 25px;
 }
 
 .footer-contact {
-    justify-self: center;}
+    justify-self: center;
+    padding-right: 50px;
+}
+
+.social-link {
+    font-family: "lato-Regular";
+    color: #616266;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-link i {
+    padding: 0px 10px;
+}
+
+.social-link .instagram:before {
+    content: "\ea6f";
+}
+
+.social-link .pinterest:before {
+    content: "\ea75";
+}
+
+.social-link .twitter:before {
+    content: "\ea7c";
+}
+
+.social-link .facebook:before {
+    content: "\ea67";
+}
+
+form {
+    display: flex;
+}
+
+.input {
+    height: 35px;
+    border: 0px;
+    padding: 0px;
+    padding-left: 15px;
+}
+
+.suscription_btn {
+    font-family: "oswald-Regular";
+    background: #FF565B;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: .5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #FF565B;
+    height: 35px;
+    width: 140px;
+}
